@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@font-face {
+    font-family: "Ziggy";
+    src: url(./Ziggy-Regular.woff2);
+}
+@font-face {
+    font-family: "Ziggy Heavy";
+    src: url(./Ziggy-Bold.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Nunito Sans","Ziggy", sans-serif;
+}
+
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --light: #fffadd;
+    --accent: #e5af2a;
+    --green: #1A5D63;
+}
+
+header {
+    width: 100%;
+    padding: 15px;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    height: 40px;
+    margin-right: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.header-actions {
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-actions a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-actions a.primary {
+    color: var(--accent);
+}
+.header-actions a.secondary {
+    color: black;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: all 0.15s ease-out;
+    font-weight: 700;
+}
+
+.header-actions a.secondary:hover {
+    background-color: var(--accent);
+    color: black;
+    border-color: var(--accent);
+}
+
+.breadcrumb-wrapper {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.breadcrumb-container, .puppy-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--green);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.breadcrumb-container a, .puppy-breadcrumbs a  {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--green);
+}
+
+.breadcrumb-container ion-icon, .puppy-breadcrumbs ion-icon {
+    --ionicon-stroke-width: 64px;
+    font-weight: 800;
+}
+
+.main-section .wrapper {
+    padding: 0px 15px;
+    display: grid;
+    column-gap: 15px;
+}
+
+.main-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gallery {
+    padding: 0 0 15px;
+    position: sticky;
+    top: 0; 
+}
+
+.gallery-view img {
+    width: 100%;
+    display: block;
+    border: 1px dashed #ccc;
+}
+
+.gallery-photos {
+    padding-block: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    gap: 10px;
+}
+
+.gallery-photos img {
+    width: 100%;
+    max-width: 120px;
+    height: 100%;
+    object-fit: cover;
+    border: 1px dashed #ccc;
+}
+
+.gallery-photos img:first-child {
+    padding-left: 0;
+}
+
+.gallery-photos::-webkit-scrollbar {
+    /* width: 2px; */
+    height: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.gallery-photos::-webkit-scrollbar-thumb {
+    background: #1A5D63;
+    border-radius: 20px;
+    transition: all 0.5s ease !important;
+}
+
+.gallery-photos::-webkit-scrollbar-track {
+    background: lightgrey;
+    border-radius: 15px;
+}
+
+.gallery-photos::-webkit-scrollbar-thumb:hover {
+    background: #2b98a2;
+}
+
+.product-info {
+    padding: 0 15px;
+}
+
+.product-name {
+    font-size: clamp(25px, 4.5vw, 40px);
+    font-family: "Ziggy Heavy", "Nunito";
+    letter-spacing: -0.5px;
+    color: var(--green);
+}
+
+.product-price {
+    font-size: 30px;
+    font-weight: 700;
+    margin-block: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.strike-price {
+    color: grey;
+    font-size: 25px;
+    text-decoration: line-through;
+}
+
+.final-price {
+    color: var(--accent);
+
+}
+
+.detail-badges {
+    font-size: 24px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.detail-badge {
+    /* padding: 0 20px; */
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.detail-badge .icon {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    background: var(--green);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2.5px;
+    border-radius: 15px;
+}
+
+.detail-badge .detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detail-badge .label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.detail-info .value {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.see-more {
+    margin: 10px 0;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 17px;
+    color: #0e373b;
+}
+
+.product-actions {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-actions button {
+    padding: 10px 30px;
+    flex: 1;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-wrap: nowrap;
+}
+
+.product-actions .bring-home {
+    background: #ffc32d;
+    color: black;
+}
+
+.product-actions button img {
+    width: 50px;
+}
+
+.product-actions .book-now {
+    background: #ffffff;
+    border: 2px solid #0e373b;
+    color: #0e373b;
+}
+
+.product-actions .book-now a {
+    color: #0e373b;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.description-section {
+    margin: 70px 0;
+    background: #fff7c9;
+}
+
+.description-section > svg:first-child {
+    width: 100%;
+    max-width: 100%;
+    color: #fff7c9;
+    transform: translateY(-95%) rotateX(180deg);
+}
+
+.description-section > svg {
+    width: 100%;
+    max-width: 100%;
+    color: #fff7c9;
+    transform: translateY(100%);
+}
+
+.description-section .wrapper {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-container {
+    max-width: 75%;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.tab-data-container * {
+    font-family: "Ziggy";
+}
+
+.tab-container .tab {
+    padding: 12.5px 25px;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.tab-container .tab.active {
+    background: #ffc32d;
+    color: black;
+}
+
+.tab-data-container {
+    margin: 30px auto 50px;
+}
+
+.tab-data-container > *:not(:first-child) {
+    display: none;
+}
+
+.tab-data-container .description h2,
+.tab-data-container .specification h2,
+.tab-data-container .contact h2 {
+    font-size: 32px;
+    color: #e3a301;
+    font-family: "Ziggy Heavy";
+}
+
+.specs-list {
+    list-style: disc;
+    margin: 20px auto;
+}
+
+.specs-list li {
+    margin: 5px 0;
+    /* padding-left: 25px; */
+}
+
+
+.specs-list li a {
+    color: #e3a300;
+}
+
+.guarantee-section {
+    margin: 100px 0;
+    background: lightblue;
+}
+
+.guarantee-section > svg:first-child {
+    width: 100%;
+    max-width: 100%;
+    color: lightblue;
+    transform: translateY(-95%) rotateX(180deg);
+}
+
+.guarantee-section > svg {
+    width: 100%;
+    max-width: 100%;
+    color: lightblue;
+    transform: translateY(100%);
+}
+
+.guarantee-section .wrapper {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.section-heading h2 {
+    font-family: "Ziggy";
+}
+
+.guarantee-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.guarantee-badges {
+    flex: 1;
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.guarantee-badge {
+    padding: 20px;
+    max-width: 250px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.guarantee-badge i {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #5993ff;
+}
+
+.guarantee-badge p {
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.guarantee-text {
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    color: #222;
+}
+
+.parents-section {
+    background: var(--light);
+}
+
+.parents-section .wrapper {
+    padding: 70px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.parent-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 50px auto 0;
+}
+
+.parent-container .parent {
+    cursor: pointer;
+    flex: 1;
+    max-width: calc(50% - 15px);
+}
+
+.parent-container .parent .parent-details {
+    width: 100%;
+    position: relative;
+}
+
+.parent-details img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.parent-details .overlay {
+    width: 50%;
+    height: 100%;
+    background: #0009;
+    color: white;
+    padding: 30px 50px;
+    border-radius: 15px 0 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.parent:hover .overlay {
+    opacity: 1;
+}
+
+.parent-details .overlay h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.parent .meet-parent {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: var(--green);
+    font-size: 24px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 30px;
+    background: var(--green);
+    color: white;
+    display: flex;
+    gap: 20px;
+    border-top: 1.75px dashed #ccc;
+}
+
+.footer-col {
+    flex: 1;
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-col > img:nth-child(2) {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.address, .telephone {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: italic;
+}
+
+footer form {
+    margin: 30px 0;
+}
+
+footer form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+footer form button.submit {
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin: 15px 0;
+    background: var(--accent);
+    font-weight: 700;
+}
